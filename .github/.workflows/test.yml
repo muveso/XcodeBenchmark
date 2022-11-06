@@ -1,0 +1,15 @@
+name: iOS Builder 🎮
+
+on: workflow_dispatch
+
+jobs:
+  buildForiOSPlatform:
+    name: Build for iOS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+       
+      - name: Run test
+        run: ${GITHUB_WORKSPACE}/benchmark.sh
